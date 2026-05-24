@@ -1,0 +1,20 @@
+{
+  "name": "cloudflare-mail-pro",
+  "version": "1.0.0",
+  "description": "Multi-user email web app for Cloudflare Workers + D1 + KV + Email Routing + Resend.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "node --check src/index.js",
+    "db:init": "wrangler d1 execute mail-pro-db --file ./migrations/0001_init.sql --remote",
+    "db:upgrade": "wrangler d1 execute mail-pro-db --file ./migrations/0002_upgrade_existing.sql --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

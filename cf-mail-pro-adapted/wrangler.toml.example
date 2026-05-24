@@ -1,0 +1,16 @@
+name = "cloudflare-mail-pro"
+main = "src/index.js"
+compatibility_date = "2026-05-23"
+
+[vars]
+ALLOWED_EMAIL_DOMAIN = "example.com"
+SESSION_TTL_SECONDS = "604800"
+
+[[d1_databases]]
+binding = "MY_EMAIL_DB"
+database_name = "mail-pro-db"
+database_id = "your-d1-database-id"
+
+[[kv_namespaces]]
+binding = "EMAIL_AUTH_KV"
+id = "your-kv-namespace-id"
